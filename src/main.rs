@@ -1,4 +1,4 @@
-use relm4::{send, AppUpdate, Model, RelmApp, Sender, WidgetPlus, Widgets};
+use relm4::{send, AppUpdate, Model, RelmApp, Sender, WidgetPlus, Widgets, view};
 use relm4::gtk;
 use relm4::gtk::prelude::{BoxExt, ButtonExt, GtkWindowExt, OrientableExt};
 
@@ -38,7 +38,7 @@ impl Widgets<AppModel, ()> for AppWidgets {
         gtk::ApplicationWindow {
             set_title: Some("Simple app"),
             set_default_width: 300,
-            set_default_height: 100,
+            set_default_height: 150,
             set_child = Some(&gtk::Box) {
                 set_orientation: gtk::Orientation::Vertical,
                 set_margin_all: 5,
